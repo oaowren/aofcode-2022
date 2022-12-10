@@ -26,6 +26,7 @@ object FirstDec {
   def main(args: Array[String]) = {
     readFile(s"inputs_2022/day_${day}_large.txt", countCals)
     val elvesSorted = elves.toList.sorted.reverse
+    println(elvesSorted(0))
     println(elvesSorted(0) + elvesSorted(1) + elvesSorted(2))
   }
 }

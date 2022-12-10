@@ -5,6 +5,7 @@ object SecondDec {
   val day = 2
 
   var score = 0
+  var newScore = 0
 
   def getScore(line: String): Unit = {
     val splitted = line.split(" ")
@@ -33,7 +34,7 @@ object SecondDec {
         case ("A", "Z") | ("B", "Y") | ("C", "X") => 2
         case _ => 1
     }
-    score = score + selectionScore + winScore
+    newScore = newScore + selectionScore + winScore
   }
 
   def readFile(filename: String, cb: String => Unit): Unit = {
@@ -43,6 +44,7 @@ object SecondDec {
   }
 
   def main(args: Array[String]) = {
+    readFile(s"inputs_2022/day_${day}_large.txt", getScore)
     readFile(s"inputs_2022/day_${day}_large.txt", getNewScore)
     println(score)
   }

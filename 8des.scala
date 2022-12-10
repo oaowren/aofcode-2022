@@ -76,6 +76,7 @@ object EighthDec {
     for ((tree, index) <- invertedTrees.zipWithIndex){
         yTrees(tree, index)
     }
+    println(discoveredTrees.toSet.toList.length)
     println(trees.toList.zipWithIndex.flatMap {
         case (el, x) => 
             el.toCharArray().zipWithIndex.map {
